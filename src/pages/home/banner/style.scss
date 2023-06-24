@@ -1,0 +1,153 @@
+.banner {
+  height: 26rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .backdrop_img{
+    width: 80%;
+    height: 80%;
+    opacity: 0.9;
+    position: absolute;
+    border-radius:20px;
+    overflow: hidden;
+    top: calc((26rem - 80%) / 2);
+    left: 10%;
+    .lazy-load-image-background{
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            
+        }
+      }
+    }
+   .heroBannerContent{
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    font-size: 34px;
+    gap: 10px;
+    color: white;
+    font-weight: 900;
+    flex-direction: column;
+    align-items: center;
+    height: 42%;
+    justify-content: space-around;
+
+    
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .container {
+    padding: 3rem;
+    width: 61%;
+    max-width: 700px;
+  }
+  
+  input[type="text"] {
+    -webkit-appearance: none !important; /* Chrome, Safari 3 */
+    -moz-appearance: none !important; /* Firefox */
+    appearance: none !important; /* Standard */
+    background-clip: padding-box;
+    background-color: white;
+    vertical-align: middle;
+    border-radius: 0.25rem;
+    border: 1px solid #e0e0e5;
+    font-size: 1rem;
+    width: 100%;
+    line-height: 2;
+    padding: 0.375rem 1.25rem;
+    -webkit-transition: border-color 0.2s;
+    -moz-transition: border-color 0.2s;
+    transition: border-color 0.2s;
+  }
+  
+  input[type="text"]:focus {
+    transition: all 0.5s;
+    box-shadow: 0 0 40px #f9d442b9;
+    border-color: #f9d342;
+    outline: none;
+  }
+  
+  form.search-form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  label {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    align-self: center;
+    margin-bottom: 0;
+  }
+  
+  input.search-field {
+    margin-bottom: 0;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    align-self: center;
+    height: 51px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  input.search-submit {
+    height: 51px;
+    margin: 0;
+    padding: 1rem 1.3rem;
+    width: 88px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    font-family: "Font Awesome 5 Free";
+    font-size: 1rem;
+  }
+  
+  .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+  
+  .button {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.8rem;
+    line-height: 1.15;
+    background: #f9d342;
+    color: #292826;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    text-shadow: none;
+    transition: all 0.5s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+  }
+  
+  .button:hover,
+  .button:active,
+  .button:focus {
+    cursor: pointer;
+    background: #d4b743;
+    color: #292826;
+    outline: 0;
+  }
+  
+
+   }
+}
