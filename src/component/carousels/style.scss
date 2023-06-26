@@ -1,116 +1,114 @@
-@import '../../mixin.scss';
-.carousel{
-    height: 50%;
+@import "../../mixin.scss";
+.carousel {
+  height: 50%;
+  width: 100%;
+  position: relative;
+  & > span {
+    position: absolute;
+    user-select: none;
+    z-index: 1;
+    font-size: 64px;
+    color: rgb(0, 0, 0, 0.7);
+    top: calc(calc(250px / 2) - 32px);
+    border-radius: 50%;
+    &:hover {
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+    }
+  }
+  & > span:nth-child(1) {
+    left: 10px;
+  }
+  & > span:nth-child(2) {
+    right: 10px;
+  }
+  .carouselsItems {
+    height: 100%;
     width: 100%;
+    display: flex;
+    gap: 2%;
     position: relative;
-    &>span{
-        position: absolute;
-        user-select: none;
-        z-index: 1;
-        font-size: 64px;
-        color: rgb(0, 0, 0,.7);
-        top: calc(calc(250px/2) - 32px);
-        border-radius: 50%;
-        &:hover{
-            color: rgb(0, 0, 0);
-            cursor: pointer;
+    overflow-y: hidden;
+    .shadow {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      &:hover {
+        -webkit-box-shadow: inset 0px -168px 87px -77px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset 0px -168px 87px -77px rgba(0, 0, 0, 0.4);
+        box-shadow: inset 0px -268px 47px -77px rgba(0, 0, 0, 0.4);
+      }
+    }
+    .carouselItem {
+      height: 250px;
+      background-color: white;
+      width: 23.49%;
+      @include md {
+        width: 19.66%;
+      }
+      @include lg {
+        width: 17.7%;
+      }
+      @include xl {
+        width: 13.7%;
+      }
+      position: relative;
+      display: flex;
+      border-radius: 10px;
+      flex-shrink: 0;
+      overflow: hidden;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-        }
-    }
-    &>span:nth-child(1){
-        left: 10px;
-    }
-    &>span:nth-child(2){
-        right: 10px;
-    }
-    .carouselsItems{
-        height: 100%;
+      img {
         width: 100%;
-        display: flex;
-        gap: 2%;
-        position: relative;
-        overflow-y: hidden;
-        .shadow{
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            &:hover{
-                -webkit-box-shadow: inset 0px -168px 87px -77px rgba(0,0,0,0.4);
-    -moz-box-shadow: inset 0px -168px 87px -77px rgba(0,0,0,0.4);
-    box-shadow: inset 0px -268px 47px -77px rgba(0,0,0,0.4);
-            }
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .label {
+        z-index: 1;
+        position: absolute;
+        width: 80%;
+        bottom: 10px;
+        overflow: hidden;
+        max-height: 19%;
+        padding: 5px;
+        left: 10px;
+        border-radius: 10px;
+        background-color: rgb(241, 9, 48);
+        color: white;
+      }
+      .cuisineType {
+        z-index: 1;
+        position: absolute;
+        top: 10px;
+        border-radius: 10px;
+        left: 10px;
+        padding: 5px;
+        background-color: rgb(21, 6, 187);
+        color: white;
+      }
+      span {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        transition: ease 0.3s;
+        z-index: 1;
+        &.red {
+          color: red;
         }
-        .carouselItem{
-            height: 250px;
-            background-color: white;
-            width: 23.49%;
-            @include md{
-                width: 19.66%;
-            }
-            @include lg{
-                width: 17.7%;
-            }
-            @include xl{
-                width: 13.7%;
-
-            }
-            position: relative;
-            display: flex;
-            border-radius: 10px;
-            flex-shrink: 0;
-            overflow: hidden;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-            }
-            .label{
-                z-index: 1;
-                position: absolute;
-                width: 80%;
-                bottom: 10px;
-                overflow: hidden;
-                max-height: 19%;
-                padding: 5px;
-                left: 10px;
-                border-radius: 10px;
-                background-color: rgb(241, 9, 48);
-                color: white;
-            }
-            .cuisineType{
-                z-index: 1;
-                position: absolute;
-                top: 10px;
-                border-radius: 10px;
-                left: 10px;
-                padding: 5px;
-                background-color: rgb(21, 6, 187);
-                color: white;
-            }
-            span{
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                color: white;
-                transition: ease .3s;
-                z-index: 1;
-                &.red{
-                    color: red;
-                }
-                &:hover{
-                    cursor: pointer;
-                    font-size: 34px;
-                    top: 5px;
-                    right: 5px;
-                }
-            }
+        &:hover {
+          cursor: pointer;
+          font-size: 34px;
+          top: 5px;
+          right: 5px;
         }
+      }
     }
+  }
 }

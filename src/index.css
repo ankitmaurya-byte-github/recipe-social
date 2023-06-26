@@ -23,7 +23,7 @@ html body #root{
   box-sizing: border-box;
 }
  body > svg{
-  height: 197vh;
+  height: 252vh;
   width: 100vw;
   z-index: -3;
   position: absolute;

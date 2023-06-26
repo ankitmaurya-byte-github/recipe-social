@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.scss";
-import back from './back.jpg'
+import back from "./back.jpg";
 import Img from "../../../component/lasyLoading/Lasyloding";
 import { changeuser } from "../../../store/slice";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,21 +9,21 @@ import { useRef } from "react";
 function Banner() {
   const [query, setquery] = useState("");
   const dispatch = useDispatch();
-  const ref=useRef()
+  const ref = useRef();
   const [loading, setloading] = useState(false);
   const [background, setbackground] = useState(back);
-  const user=useSelector(state=>state.user.currentuser)
-  const searchQueryHandler=(e)=>{
-    if(e.key=='Enter'){
-      dispatch(changeuser({...user,search:e.target.value}))
+  const user = useSelector((state) => state.user.currentuser);
+  const searchQueryHandler = (e) => {
+    if (e.key == "Enter") {
+      dispatch(changeuser({ ...user, search: e.target.value }));
       console.log("clicked");
-      setquery("")
+      setquery("");
     }
   };
-  const searchQueryHandlerClick=()=>{
-    dispatch(changeuser({...user,search:ref.current.value}))
-    setquery("")
-  }
+  const searchQueryHandlerClick = () => {
+    dispatch(changeuser({ ...user, search: ref.current.value }));
+    setquery("");
+  };
   return (
     <div className="banner">
       <div className="backdrop_img">{!loading && <Img src={background} />}</div>
@@ -41,14 +41,15 @@ function Banner() {
                   value={query}
                   ref={ref}
                   onChange={(e) => setquery(e.target.value)}
-                  onKeyDown={(e)=>searchQueryHandler(e)}
+                  onKeyDown={(e) => searchQueryHandler(e)}
                   placeholder="search movie ...."
                   class="search-field"
                   name="s"
                   title=""
                 />
               </label>
-              <input onClick={searchQueryHandlerClick}
+              <input
+                onClick={searchQueryHandlerClick}
                 class="search-submit button"
                 value="Search"
               />
